@@ -1,0 +1,278 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.body {
+  background: linear-gradient(180deg, #615dad, #ffc8da);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  color: white;
+  min-height: 100vh;
+}
+/* .body--long {
+  height: 100%;
+} */
+
+.hlavnibox {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box1 {
+  background-color: #283e50;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.tlacitka {
+  display: flex;
+  flex-direction: column;
+}
+
+.tlacitko1 {
+  text-align: center;
+  background-color: #1fcca4;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 40px;
+}
+
+.tlacitko2 {
+  text-align: center;
+  background-color: #0197f6;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 40px;
+  border-top: #283e50 solid 1px;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  margin: 10px;
+  text-align: center;
+}
+
+a.tlacitko1:hover {
+  background-color: #1cbb96;
+}
+
+a.tlacitko2:hover {
+  background-color: #0090e9;
+}
+
+ol {
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.instrukce {
+  width: 80%;
+  border-radius: 0;
+}
+
+.box1--pravidla {
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.ikony {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%);
+}
+
+figure {
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 15px;
+}
+
+@media (min-width: 650px) {
+  .hlavnibox--pravidla {
+    width: 640px;
+  }
+  .imageGalery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .instrukce {
+    width: 100%;
+  }
+
+  .navod {
+    width: calc(40% - 1rem);
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 800px) {
+  .hlavnibox--pravidla {
+    width: 700px;
+  }
+  .imageGalery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .instrukce {
+    width: 100%;
+  }
+
+  .navod {
+    width: calc(40% - 1rem);
+    flex-grow: 1;
+  }
+}
+
+.hracibox {
+  max-width: 80vmin;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.hraciplocha {
+  display: flex;
+  flex-direction: column;
+}
+
+.jenatahu {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ikony--hra {
+  margin: 5px;
+}
+
+.kdohraje {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hracimenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tlacitka--hra {
+  display: flex;
+  flex-direction: row;
+}
+
+.tlacitkodomu {
+  text-align: center;
+  background-color: #1fcca4;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  padding-top: 1.5px;
+  margin-right: 4px;
+}
+
+.tlacitkoznovu {
+  text-align: center;
+  background-color: #0197f6;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  padding-top: 1.5px;
+}
+
+a.tlacitkodomu:hover {
+  background-color: #1cbb96;
+}
+
+a.tlacitkoznovu:hover {
+  background-color: #0090e9;
+}
+
+.hracipole {
+  display: flex;
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  width: calc(80vmin / 10);
+  height: calc(80vmin / 10);
+  margin: 0;
+  padding: 0;
+  border: 0.5px solid black;
+  background-color: rgb(255, 255, 255, 0.3);
+  /* opacity: 40%; */
+  /*color: white*/
+  display: flex;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.board__field--circle {
+  background-image: url('podklady/circle.svg');
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 50% 50%;
+  animation-name: zvetsovani;
+  animation-duration: 0.15s;
+}
+
+.board__field--cross {
+  background-image: url('podklady/cross.svg');
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 50% 50%;
+  animation-name: zvetsovani;
+  animation-duration: 0.15s;
+}
+
+.board__field--winner {
+  opacity: 80%;
+  background-color: darkmagenta;
+}
+
+@keyframes zvetsovani {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 65%;
+  }
+}
