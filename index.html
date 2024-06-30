@@ -1,31 +1,35 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>P-Mission Countdown</title>
     <link rel="stylesheet" href="style.css" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
+
   </head>
   <body class="body">
-    <div class="hlavnibox">
-      <img src="uvodni.jpeg" alt="Čtyřlistkové piškvorky" />
-      <div class="box1">
-        <h1>Piškvorky</h1>
-        <p>
-          Piškvorky jsou velmi oblíbená společenská hra pro dva hráče. Obvykle
-          se hraje s tužkou a čtverečkovaným papírem. Nyní můžete využít naši
-          skvělou aplikaci, takže už nepotřebujete ani tužku a nemusíte hledat
-          čtverečkovaný papír. Přejeme vám hodně zábavy!
-        </p>
+    <div class="container">
+      <h1 id="headline">Countdown to complete mission</h1>
+      <div id="countdown">
+        <ul>
+          <li><span id="days"></span>days</li>
+          <li><span id="hours"></span>Hours</li>
+          <li><span id="minutes"></span>Minutes</li>
+          <li><span id="seconds"></span>Seconds</li>
+        </ul>
+        <ul>
+          <li><span id="phase"></span>phase</li>
+        </ul>
       </div>
-      <div class= "tlacitka">
-      <a class="tlacitko1" href="pravidla.html">Pravidla</a>
-      <a class="tlacitko2" href="hra.html">Začít hrát</a>
+      <div id="content" class="emoji">
+        <span>🥳</span>
+        <span>🎉</span>
+        <span>🎂</span>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
