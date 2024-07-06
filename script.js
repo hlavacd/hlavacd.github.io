@@ -5,21 +5,20 @@
         day = hour * 24;
 
     // START 19.6.2024
-    // 9 Phases each 4 weeks = 9 x 4 x 7
+    // 9 Phases each 4 weeks = 9 x 3 x 7
     let phases = [
-        new Date("2024-06-19T08:00:00.000Z")
+        new Date("2024-06-19T08:00:00.000Z"),
+       // new Date("2024-07-10T08:00:00.000Z"),
     ];
     let actualPhase = phases.length;
     let startDate = phases[phases.length - 1];
-    let targetDate = new Date().setDate(startDate.getDate() + (9 - phases.length + 1) * 4 * 7);
-
-    console.log("Target: " + targetDate);
+    let targetDate = new Date(startDate.getTime() + (9 - phases.length + 1) * 3 * 7 * day);
 
     const countDown = new Date(targetDate).getTime(),
         x = setInterval(function () {
 
-            const now = new Date().getTime(),
-                distance = countDown - now;
+            const now = new Date().getTime();
+            distance = countDown - now;
 
             document.getElementById("days").innerText = Math.floor(distance / (day));
             document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour));
