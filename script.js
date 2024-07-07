@@ -34,6 +34,14 @@
                 document.getElementById("content").style.display = "block";
                 clearInterval(x);
             }
+
+            for (let i = 0; i < 9; i++) {
+                let style = "bar";
+                if (i < actualPhase) {
+                    style = "bar-full";
+                }
+                document.getElementById("bar"+i).className = style;
+            }
             //seconds
-        }, 0)
+        }, 1)
 }());

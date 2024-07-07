@@ -65,6 +65,26 @@ li span {
     padding: 0 .5rem;
 }
 
+.barman {
+    margin: 20px auto;
+}
+
+.bar, .bar-full{
+    display: inline-block;
+    font-size: 4rem;
+    width: 80px;
+    height: 20px;
+    border-color: #2d2d73;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.bar-full {
+    background: #2d2d73;
+}
+
 @media all and (max-width: 768px) {
     h1 {
         font-size: calc(1.5rem * var(--smaller));
