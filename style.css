@@ -69,7 +69,7 @@ li span {
     margin: 20px auto;
 }
 
-.bar, .bar-full{
+.bar{
     display: inline-block;
     font-size: 4rem;
     width: 80px;
@@ -81,7 +81,11 @@ li span {
     margin: 5px;
 }
 
-.bar-full {
+.actual {
+    background-image: linear-gradient(90deg, #2d2d73, #4fdcff);
+}
+
+.full {
     background: #2d2d73;
 }
 

@@ -8,7 +8,7 @@
     // 9 Phases each 4 weeks = 9 x 3 x 7
     let phases = [
         new Date("2024-06-19T08:00:00.000Z"),
-       // new Date("2024-07-10T08:00:00.000Z"),
+        //new Date("2024-07-10T08:00:00.000Z"),
     ];
     let actualPhase = phases.length;
     let startDate = phases[phases.length - 1];
@@ -37,10 +37,13 @@
 
             for (let i = 0; i < 9; i++) {
                 let style = "bar";
-                if (i < actualPhase) {
-                    style = "bar-full";
+                if (i < actualPhase - 1) {
+                    style = "bar full";
                 }
-                document.getElementById("bar"+i).className = style;
+                if (i === actualPhase - 1) {
+                    style = "bar actual";
+                }
+                document.getElementById("bar" + i).className = style;
             }
             //seconds
         }, 1)
