@@ -8,7 +8,8 @@
     // 9 Phases each 4 weeks = 9 x 3 x 7
     let phases = [
         new Date("2024-06-19T08:00:00.000Z"),
-        //new Date("2024-07-10T08:00:00.000Z"),
+        new Date("2024-07-10T08:00:00.000Z"),
+        //new Date("2024-07-31T08:00:00.000Z"),
     ];
     let actualPhase = phases.length;
     let startDate = phases[phases.length - 1];
