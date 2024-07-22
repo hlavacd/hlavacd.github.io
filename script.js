@@ -38,13 +38,19 @@
 
             for (let i = 0; i < 9; i++) {
                 let style = "bar";
+                let bar = document.getElementById("bar" + i);
+                let content = '-';
                 if (i < actualPhase - 1) {
                     style = "bar full";
+                    content = phases[i].toLocaleDateString("cs-CZ");
                 }
                 if (i === actualPhase - 1) {
                     style = "bar actual";
+                    content = phases[i].toLocaleDateString("cs-CZ");
                 }
-                document.getElementById("bar" + i).className = style;
+                bar.className = style;
+                bar.innerText = content;
+
             }
             //seconds
         }, 1)
