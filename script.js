@@ -9,10 +9,16 @@
     let phases = [
         new Date("2024-06-19T08:00:00.000Z"),
         new Date("2024-07-10T08:00:00.000Z"),
-        //new Date("2024-07-31T08:00:00.000Z"),
+        new Date("2024-07-31T08:00:00.000Z"),
+        new Date("2024-08-21T08:00:00.000Z"),
     ];
+
+    let now = new Date();
     let actualPhase = phases.length;
-    let startDate = phases[phases.length - 1];
+    while (actualPhase > 0 && phases[actualPhase-1] > now) {
+        actualPhase--;
+    }
+    let startDate = phases[actualPhase];
     let targetDate = new Date(startDate.getTime() + (9 - phases.length + 1) * 3 * 7 * day);
 
     const countDown = new Date(targetDate).getTime(),
