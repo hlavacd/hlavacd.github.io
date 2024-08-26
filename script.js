@@ -11,15 +11,16 @@
         new Date("2024-07-10T08:00:00.000Z"),
         new Date("2024-07-31T08:00:00.000Z"),
         new Date("2024-08-21T08:00:00.000Z"),
+        new Date("2024-09-11T08:00:00.000Z"),
     ];
 
     let now = new Date();
-    let actualPhase = phases.length;
-    while (actualPhase > 0 && phases[actualPhase-1] > now) {
+    let actualPhase = phases.length - 1;
+    while (actualPhase > 0 && phases[actualPhase] > now) {
         actualPhase--;
     }
     let startDate = phases[actualPhase];
-    let targetDate = new Date(startDate.getTime() + (9 - phases.length + 1) * 3 * 7 * day);
+    let targetDate = new Date(startDate.getTime() + (9 - actualPhase) * 3 * 7 * day);
 
     const countDown = new Date(targetDate).getTime(),
         x = setInterval(function () {
@@ -32,7 +33,7 @@
             document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute));
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-            document.getElementById("phase").innerText = actualPhase + "/9";
+            document.getElementById("phase").innerText = (actualPhase + 1) + "/9";
 
             //do something later when date is reached
             if (distance < 0) {
@@ -46,11 +47,11 @@
                 let style = "bar";
                 let bar = document.getElementById("bar" + i);
                 let content = '-';
-                if (i < actualPhase - 1) {
+                if (i < actualPhase) {
                     style = "bar full";
                     content = phases[i].toLocaleDateString("cs-CZ");
                 }
-                if (i === actualPhase - 1) {
+                if (i === actualPhase) {
                     style = "bar actual";
                     content = phases[i].toLocaleDateString("cs-CZ");
                 }
